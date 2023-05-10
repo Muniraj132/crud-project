@@ -31,7 +31,7 @@
   else
   {
     $cv=time().$expdf;
-    move_uploaded_file($_FILES["resume"]["name"],"resumes/".$cv);
+    move_uploaded_file($_FILES["resume"]["tmp_name"],"resumes/".$cv);
  
     $sql="insert into `crud` (image,name,email,mobile,password,resume)
      values('$imgfile','$name','$email','$mobile','$password','$cv')";
