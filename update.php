@@ -10,6 +10,8 @@
   $mobile=$row['mobile'];
   $password=$row['password'];
   $resume=$row['resume'];
+ 
+
 
  if(isset($_POST['submit'])){
     $name=$_POST['name'];
@@ -91,10 +93,13 @@
 <div class="form-group">
     <label>Profile </label>
     <input type="file" class="form-control" placeholder="Upload your Profile" name="profile" autocomplete="off" value=<?php echo $profile; ?>>
+    <span><?php echo $profile; ?></span>
+    
 </div>
 <div class="form-group"> 
     <label>Resume </label>
     <input type="file" class="form-control" placeholder="Upload your Resume" name="resume" autocomplete="off"value=<?php echo $resume; ?>>
+    <span><?php echo $resume; ?></span>
 </div>
   <button type="submit" name="submit" class="btn btn-primary">Update</button>
 </form>
